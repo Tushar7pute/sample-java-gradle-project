@@ -1,6 +1,8 @@
 
 # Basic Java-Gradle project
 
+This project demonstrates gradle build tool usage with java.
+It simply gives greeting based on the time of the day.
 
 ## Development
 
