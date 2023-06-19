@@ -4,12 +4,18 @@ import java.util.Calendar;
 
 public class Greetings {
 
-    public static final String MORNING = "Good Morning!";
-    public static final String AFTERNOON =  "Good Afternoon!";
-    public static final String EVENING =  "Good Evening!";
+    public static final String MORNING = "Good Morning";
+    public static final String AFTERNOON =  "Good Afternoon";
+    public static final String EVENING =  "Good Evening";
 
-    public static String fetchGreetingMessage(){
-        int hotd = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+    Calendar calendar ;
+
+    public Greetings(Calendar calendar){
+        this.calendar = calendar;
+    }
+
+    public String fetchGreetingMessage(){
+        int hotd = calendar.get(Calendar.HOUR_OF_DAY);
 
         if(hotd < 12){
             return MORNING;
